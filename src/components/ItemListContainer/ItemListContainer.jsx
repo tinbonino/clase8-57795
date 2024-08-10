@@ -10,7 +10,7 @@ const ItemListContainer = ({ saludo }) => {
 
 
  
-  console.log(mensaje)
+
   const [products, setProducts] = useState([]);
 
   const { idCategory } = useParams()
