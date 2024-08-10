@@ -8,7 +8,8 @@ import "./itemListContainer.css"
 const ItemListContainer = ({ saludo }) => {
 
 
-
+  const mensaje= import.meta.env.VITE_MENSAJE;
+  console.log(mensaje);
  
 
   const [products, setProducts] = useState([]);
@@ -33,8 +34,8 @@ const ItemListContainer = ({ saludo }) => {
 
   return (
     <div className="item-list-container">
-      
-      <h2 className="title-items">{saludo}</h2>
+      {mensaje ? <h2>{mensaje}</h2>:
+      <h2 className="title-items">{saludo}</h2>}
       <ItemList products={products} />
     </div>
   );
